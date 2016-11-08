@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *P2Score;
 @property (weak, nonatomic) IBOutlet UILabel *P1Score;
 @property (weak, nonatomic) IBOutlet UIButton *EnterButton;
+@property (weak, nonatomic) IBOutlet UILabel *P2Lives;
+@property (weak, nonatomic) IBOutlet UILabel *P1Lives;
 @property GameManager *gm;
 @property NSMutableArray *playerAnswer;
 
@@ -33,6 +35,10 @@
     [self.P1Score sizeToFit];
     self.P2Score.text = [NSString stringWithFormat:@"Player 2 Score: %ld", (long)[self.gm.player2 score]];
     [self.P2Score sizeToFit];
+    self.P1Lives.text = [NSString stringWithFormat:@"Player 1 Lives: %ld", (long)[self.gm.player1 lives]];
+    [self.P1Lives sizeToFit];
+    self.P2Lives.text = [NSString stringWithFormat:@"Player 2 Lives: %ld", (long)[self.gm.player2 lives]];
+    [self.P2Lives sizeToFit];
 }
 
 - (IBAction)whichButton:(id)sender {
