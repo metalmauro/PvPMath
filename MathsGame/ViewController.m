@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *P1Lives;
 @property (weak, nonatomic) IBOutlet UILabel *P2Lives;
 @property (weak, nonatomic) IBOutlet UILabel *GameThread;
-
+@property (weak, nonatomic) IBOutlet UIButton *EnterAnswerButton;
 @property NSMutableArray *userInput;
 @property (strong, nonatomic) GameManager *gm;
 
@@ -34,18 +34,21 @@
     self.P2Score.text = [NSString stringWithFormat:@"%ld",[self.gm p2Score]];
     self.P1Lives.text = [NSString stringWithFormat:@"%ld",[self.gm p1Lives]];
     self.P2Lives.text = [NSString stringWithFormat:@"%ld",[self.gm p2Lives]];
+    self.GameThread.text = self.gm.question;
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     GameManager *gm = [[GameManager alloc]init];
+    self.gm = gm;
     self.userInput = [NSMutableArray new];
     self.P1Score.text = [NSString stringWithFormat:@"%ld",[self.gm p1Score]];
     self.P2Score.text = [NSString stringWithFormat:@"%ld",[self.gm p2Score]];
     self.P1Lives.text = [NSString stringWithFormat:@"%ld",[self.gm p1Lives]];
     self.P2Lives.text = [NSString stringWithFormat:@"%ld",[self.gm p2Lives]];
     self.GameThread.text = self.gm.question;
-    [self.gm generateQuestion];
+    
 }
 
 - (IBAction)Button1:(id)sender {
@@ -80,8 +83,20 @@
 }
 
 - (IBAction)EnterAnswerButton:(id)sender {
-    [self.gm checkAnswer:[self finalizeInput:self.userInput]];
     
+    if([self.GameThread.text isEqualToString:@"Game Start"]){
+        [self.gm generateQuestion];
+        [self reloadView];
+    }else if([self.GameThread.text isEqualToString:@"GAME OVER!"]){
+        
+    }else{
+        [self.gm checkAnswer:[self finalizeInput:self.userInput]];
+        [self reloadView];
+        [self.gm generateQuestion];
+        [self performSelector:@selector(reloadView)
+                   withObject:self
+                   afterDelay:3.0];
+    }
 }
 
 

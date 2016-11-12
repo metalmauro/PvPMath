@@ -20,6 +20,6 @@
 
 -(NSString*)generateQuestion;
 
--(Player*)checkAnswer:(NSString*)input;
+-(void)checkAnswer:(NSString*)input;
 
 @end
