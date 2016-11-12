@@ -13,8 +13,8 @@
 {
     self = [super init];
     if (self) {
-        NSArray *players =  @[[[Player alloc]initWithName:@"matt"],
-                              [[Player alloc]initWithName:@"Jen"]];
+        NSArray *players =  @[[[Player alloc]initWithName:@"Player 1"],
+                              [[Player alloc]initWithName:@"Player 2"]];
         NSLog(@"%@",players);
         _players = [NSMutableArray arrayWithArray:players];
         _answer = 0;
@@ -80,11 +80,11 @@
 {
     for(int i = 0; i < [self.players count]; i++){
         Player *p = [self.players objectAtIndex:i];
-        if([p.name isEqualToString:@"matt"]){
+        if([p.name isEqualToString:@"Player 1"]){
             self.p1Score = p.score;
             self.p1Lives = p.lives;
         }else{
-            self.p1Lives = p.lives;
+            self.p2Lives = p.lives;
             self.p2Score = p.score;
         }
     }
@@ -92,8 +92,8 @@
 
 -(void)reset
 {
-    NSArray *players =  @[[[Player alloc]initWithName:@"matt"],
-                          [[Player alloc]initWithName:@"Jen"]];
+    NSArray *players =  @[[[Player alloc]initWithName:@"Player 1"],
+                          [[Player alloc]initWithName:@"Player 1"]];
     self.players = [NSMutableArray arrayWithArray:players];
     self.answer = 0;
     self.question = [NSString stringWithFormat:@"Game Start"];

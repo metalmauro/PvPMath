@@ -19,7 +19,7 @@
 @property NSInteger turnCounter;
 
 -(NSString*)generateQuestion;
-
+-(void)reset;
 -(void)checkAnswer:(NSString*)input;
 
 @end
