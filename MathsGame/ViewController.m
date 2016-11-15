@@ -60,39 +60,60 @@
     }if ([self.GameThread.text isEqualToString:@"GAME OVER!"]) {
         return @"Hit Enter to Start a new game";
     } else {
-        return @"";
+        NSArray *array = [NSArray arrayWithArray:self.userInput];
+        return [[array valueForKey:@"description"] componentsJoinedByString:@""];
     }
 }
 
 - (IBAction)Button1:(id)sender {
     [self.userInput addObject:@"1"];
+    self.hintLabel.text = [self hintLabeltext];
+    [self reloadView];
 }
 - (IBAction)Button2:(id)sender {
     [self.userInput addObject:@"2"];
+    self.hintLabel.text = [self hintLabeltext];
+    [self reloadView];
 }
 - (IBAction)Button3:(id)sender {
     [self.userInput addObject:@"3"];
+    self.hintLabel.text = [self hintLabeltext];
+    [self reloadView];
 }
 - (IBAction)Button4:(id)sender {
     [self.userInput addObject:@"4"];
+    self.hintLabel.text = [self hintLabeltext];
+    [self reloadView];
 }
 - (IBAction)Button5:(id)sender {
     [self.userInput addObject:@"5"];
+    self.hintLabel.text = [self hintLabeltext];
+    [self reloadView];
 }
 - (IBAction)Button6:(id)sender {
     [self.userInput addObject:@"6"];
+    self.hintLabel.text = [self hintLabeltext];
+    [self reloadView];
 }
 - (IBAction)Button7:(id)sender {
     [self.userInput addObject:@"7"];
+    self.hintLabel.text = [self hintLabeltext];
+    [self reloadView];
 }
 - (IBAction)Button8:(id)sender {
     [self.userInput addObject:@"8"];
+    self.hintLabel.text = [self hintLabeltext];
+    [self reloadView];
 }
 - (IBAction)Button9:(id)sender {
     [self.userInput addObject:@"9"];
+    self.hintLabel.text = [self hintLabeltext];
+    [self reloadView];
 }
 - (IBAction)Button0:(id)sender {
     [self.userInput addObject:@"0"];
+    self.hintLabel.text = [self hintLabeltext];
+    [self reloadView];
 }
 
 - (IBAction)EnterAnswerButton:(id)sender {

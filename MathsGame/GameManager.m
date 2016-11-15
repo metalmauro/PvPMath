@@ -87,6 +87,10 @@
             self.p2Lives = p.lives;
             self.p2Score = p.score;
         }
+        if(p.lives == 0)
+        {
+            self.question = @"GAME OVER!";
+        }
     }
 }
 

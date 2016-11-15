@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95E123D81DD7A13700EA4351 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 95E123D71DD7A13700EA4351 /* AppIcon.appiconset */; };
 		95F8A7511DD1856200A725C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F8A7501DD1856200A725C9 /* main.m */; };
 		95F8A7541DD1856200A725C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F8A7531DD1856200A725C9 /* AppDelegate.m */; };
 		95F8A7571DD1856200A725C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F8A7561DD1856200A725C9 /* ViewController.m */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95E123D71DD7A13700EA4351 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = ../AppIcon.appiconset; sourceTree = "<group>"; };
 		95F8A74C1DD1856200A725C9 /* MathsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F8A7501DD1856200A725C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		95F8A7521DD1856200A725C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		95F8A7431DD1856200A725C9 = {
 			isa = PBXGroup;
 			children = (
+				95E123D71DD7A13700EA4351 /* AppIcon.appiconset */,
 				95F8A74E1DD1856200A725C9 /* MathsGame */,
 				95F8A74D1DD1856200A725C9 /* Products */,
 			);
@@ -148,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95E123D81DD7A13700EA4351 /* AppIcon.appiconset in Resources */,
 				95F8A75F1DD1856200A725C9 /* LaunchScreen.storyboard in Resources */,
 				95F8A75C1DD1856200A725C9 /* Assets.xcassets in Resources */,
 				95F8A75A1DD1856200A725C9 /* Main.storyboard in Resources */,
